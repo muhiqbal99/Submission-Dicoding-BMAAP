@@ -23,6 +23,39 @@ object CryptoData {
         "Bitcoin Cash is a peer-to-peer electronic cash system that aims to become sound global money with fast payments, micro fees, privacy, and high transaction capacity (big blocks). In the same way that physical money, such as a dollar bill, is handed directly to the person being paid, Bitcoin Cash payments are sent directly from one person to another.",
         "Litecoin (LTC) is a cryptocurrency that was designed to provide fast, secure and low-cost payments by leveraging the unique properties of blockchain technology.")
 
+    private val cryptoATH = arrayOf("64,863.10",
+    "4,362.35",
+    "690.93",
+    "2.46",
+    "0.7376",
+    "1.06",
+    "1.96",
+    "49.69",
+    "1,635.15",
+    "412.96")
+
+    private val cryptoPrice24Hours = arrayOf("45,812.46",
+    "3,562.47",
+    "534.18",
+    "2.15",
+    "0.5156",
+    "1.00",
+    "1.70",
+    "41.63",
+    "1,167.23",
+    "318.05")
+
+    private val cryptoWallet = arrayOf("Ledger, Trezor, MathWallet, TrustWallet, BTCWallet, Electrum, Coinbase, Cobo, Safepal, Edge",
+    "Ledger, Trezor, MathWallet, TrustWallet, Metamask, MyCrypto, Coinbase, Cobo, imToken, SafePal, Binance Chain Wallet, Argent",
+    "Ledger, Trezor, MathWallet, TrustWallet, SafePal, Binance Chain Wallet",
+    "Ledger, Trezor, MathWallet, TrustWallet, Exodus, SafePal",
+    "Ledger, Trezor, MathWallet, TrustWallet, Metamask, DogeCoin Core",
+    "Ledger, Trezor, MathWallet, TrustWallet, Metamask, Coinbase, Cobo, SafePal, Tronlink, Binance Chain Wallet, Sollet",
+    "Ledger, Trezor, MathWallet, TrustWallet, Coinbase, Cobo, HyperPay, SafePal, Atomic Wallet",
+    "Ledger, Trezor, MathWallet, TrustWallet, Metamask, Fairy-wallet, Parity Signer, SafePal, Ownbit, Dharma, Binance Chain Wallet",
+    "Ledger, Trezor, MathWallet, TrustWallet, BTC Wallet, Metamask, Coinbase, Cobo, SafePal",
+    "Ledger, Trezor, MathWallet, TrustWallet, Coinbase, Cobo, SafePal, Luno")
+
     private val cryptoImages = intArrayOf(R.drawable.logo_btc,
         R.drawable.logo_eth,
         R.drawable.logo_bnb,
