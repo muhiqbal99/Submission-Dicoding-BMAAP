@@ -23,6 +23,13 @@ object CryptoData {
         "Bitcoin Cash is a peer-to-peer electronic cash system that aims to become sound global money with fast payments, micro fees, privacy, and high transaction capacity (big blocks). In the same way that physical money, such as a dollar bill, is handed directly to the person being paid, Bitcoin Cash payments are sent directly from one person to another.",
         "Litecoin (LTC) is a cryptocurrency that was designed to provide fast, secure and low-cost payments by leveraging the unique properties of blockchain technology.")
 
+    private val crytpCreator = arrayOf("Satoshi Nakamoto",
+    "",)
+
+    private val cryptoTtl = arrayOf("5 April 1975")
+
+    private val cryptoLaunch = arrayOf("2008")
+
     private val cryptoATH = arrayOf("64,863.10",
     "4,362.35",
     "690.93",

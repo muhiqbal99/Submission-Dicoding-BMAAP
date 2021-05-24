@@ -29,6 +29,7 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
             .into(holder.imgPhoto)
         holder.tvName.text = crypto.name
         holder.tvDetail.text = crypto.detail
+        holder.tv
         holder.btnFavorite.setOnClickListener { Toast.makeText(holder.itemView.context, "Favorite " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.btnShare.setOnClickListener { Toast.makeText(holder.itemView.context, "Share " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
