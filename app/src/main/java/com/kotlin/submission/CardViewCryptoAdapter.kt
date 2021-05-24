@@ -26,10 +26,8 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
             .load(crypto.photo)
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
-        holder.tvCName.text = crypto.creator
-        holder.tvCDob.text = crypto.dob
-        holder.tvCLaunch.text = crypto.launch
-        holder.tvCWallet.text = crypto.wallet
+        holder.tvCName.text = crypto.name
+        holder.tvCDesc.text = crypto.detail
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
     }
 
@@ -38,10 +36,8 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
     }
 
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.ivProfile)
-        var tvCName: TextView = itemView.findViewById(R.id.tv_creator_name)
-        var tvCDob: TextView = itemView.findViewById(R.id.tv_creator_dob)
-        var tvCLaunch: TextView = itemView.findViewById(R.id.tv_launch_coin)
-        var tvCWallet: TextView = itemView.findViewById(R.id.tv_support_wallet)
+        var imgPhoto: ImageView = itemView.findViewById(R.id.ivLogo)
+        var tvCName: TextView = itemView.findViewById(R.id.tv_item_name)
+        var tvCDesc: TextView = itemView.findViewById(R.id.tv_item_description)
     }
 }
