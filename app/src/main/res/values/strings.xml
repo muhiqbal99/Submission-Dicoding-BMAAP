@@ -7,15 +7,15 @@
     <string name="with_cardview">with CardView</string>
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
-    <string name="logo_koin">Logo Koin</string>
     <string name="about_me">About Me</string>
+    <string name="img_description">Founder</string>
     <string name="coin_name">Coin Name</string>
     <string name="coin_creator">Name</string>
     <string name="coin_overview">Overview</string>
     <string name="coin_description">Description</string>
     <string name="readmore">Readmore</string>
     <string name="coin_profile">Pic of creator coin</string>
-    <string name="ttl">TTL</string>
+    <string name="dob">Date of Birth</string>
     <string name="launched">Launch</string>
     <string name="suport_wallet">Suport Wallet :</string>
     <string name="jenis_wallet">jenis jenis wallet</string>

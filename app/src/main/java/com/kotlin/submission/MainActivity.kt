@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setActionBarTitle(title)
-
         rvCrypto = findViewById(R.id.rv_crypto)
         rvCrypto.setHasFixedSize(true)
 
@@ -49,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         when (selectedMode) {
             R.id.action_aboutme -> {
                 title = "About Me"
-                showRecyclerCardView()
             }
         }
         setActionBarTitle(title)

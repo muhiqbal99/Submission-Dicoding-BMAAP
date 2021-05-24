@@ -23,34 +23,38 @@ object CryptoData {
         "Bitcoin Cash is a peer-to-peer electronic cash system that aims to become sound global money with fast payments, micro fees, privacy, and high transaction capacity (big blocks). In the same way that physical money, such as a dollar bill, is handed directly to the person being paid, Bitcoin Cash payments are sent directly from one person to another.",
         "Litecoin (LTC) is a cryptocurrency that was designed to provide fast, secure and low-cost payments by leveraging the unique properties of blockchain technology.")
 
-    private val crytpCreator = arrayOf("Satoshi Nakamoto",
-    "",)
+    private val cryptoCreator = arrayOf("Satoshi Nakamoto",
+        "Vitalik Buterin",
+        "Changpeng Zhao (Cz)",
+        "Charles Hoskinson",
+        "Billy Markus",
+        "Brock_Pierce",
+        "Brad Garlinghouse",
+        "Dr. Gavin Wood",
+        "Hardfork from BTC",
+        "Charlie Lee")
 
-    private val cryptoTtl = arrayOf("5 April 1975")
+    private val cryptoDob = arrayOf("5 April 1975",
+        "31 Januari 1994",
+        "1977",
+        "1987 / 1988",
+        "-",
+        "14 November 1980",
+        "6 February 1971",
+        "April 1980",
+        "2017",
+        "5 January 1987")
 
-    private val cryptoLaunch = arrayOf("2008")
-
-    private val cryptoATH = arrayOf("64,863.10",
-    "4,362.35",
-    "690.93",
-    "2.46",
-    "0.7376",
-    "1.06",
-    "1.96",
-    "49.69",
-    "1,635.15",
-    "412.96")
-
-    private val cryptoPrice24Hours = arrayOf("45,812.46",
-    "3,562.47",
-    "534.18",
-    "2.15",
-    "0.5156",
-    "1.00",
-    "1.70",
-    "41.63",
-    "1,167.23",
-    "318.05")
+    private val cryptoLaunch = arrayOf("2008",
+        "30 July 2015",
+        "July 2017",
+        "2015",
+        "Desember 2013",
+        "2014",
+        "2012",
+        "26 May 2020",
+        "2017",
+        "13 October 2011")
 
     private val cryptoWallet = arrayOf("Ledger, Trezor, MathWallet, TrustWallet, BTCWallet, Electrum, Coinbase, Cobo, Safepal, Edge",
     "Ledger, Trezor, MathWallet, TrustWallet, Metamask, MyCrypto, Coinbase, Cobo, imToken, SafePal, Binance Chain Wallet, Argent",
@@ -80,6 +84,10 @@ object CryptoData {
             for (position in cryptoNames.indices) {
                 val crypto = Crypto()
                 crypto.name = cryptoNames[position]
+                crypto.creator = cryptoCreator[position]
+                crypto.dob = cryptoDob[position]
+                crypto.launch = cryptoLaunch[position]
+                crypto.wallet = cryptoWallet[position]
                 crypto.detail = cryptoDetails[position]
                 crypto.photo = cryptoImages[position]
                 list.add(crypto)

@@ -3,7 +3,6 @@ package com.kotlin.submission
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -17,7 +16,7 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
         parent: ViewGroup,
         viewType: Int
     ): CardViewCryptoAdapter.CardViewViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_crypto, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_crypto, parent, false)
         return CardViewViewHolder(view)
     }
 
@@ -27,11 +26,10 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
             .load(crypto.photo)
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
-        holder.tvName.text = crypto.name
-        holder.tvDetail.text = crypto.detail
-        holder.tv
-        holder.btnFavorite.setOnClickListener { Toast.makeText(holder.itemView.context, "Favorite " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
-        holder.btnShare.setOnClickListener { Toast.makeText(holder.itemView.context, "Share " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
+        holder.tvCName.text = crypto.creator
+        holder.tvCDob.text = crypto.dob
+        holder.tvCLaunch.text = crypto.launch
+        holder.tvCWallet.text = crypto.wallet
         holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " + listCrypto[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
     }
 
@@ -40,10 +38,10 @@ class CardViewCryptoAdapter(private val listCrypto: ArrayList<Crypto>) :
     }
 
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
-        var btnFavorite: Button = itemView.findViewById(R.id.btn_set_favorite)
-        var btnShare: Button = itemView.findViewById(R.id.btn_set_share)
+        var imgPhoto: ImageView = itemView.findViewById(R.id.ivProfile)
+        var tvCName: TextView = itemView.findViewById(R.id.tv_creator_name)
+        var tvCDob: TextView = itemView.findViewById(R.id.tv_creator_dob)
+        var tvCLaunch: TextView = itemView.findViewById(R.id.tv_launch_coin)
+        var tvCWallet: TextView = itemView.findViewById(R.id.tv_support_wallet)
     }
 }
