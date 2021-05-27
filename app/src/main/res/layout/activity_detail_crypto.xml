@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_18sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/coin_creator"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/coin_creator"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_creator" />
@@ -45,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_18sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/dob"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tv_creator_name" />
 
@@ -56,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/dob"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_dob" />
@@ -67,8 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_18sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/launched"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tv_creator_dob" />
 
@@ -78,7 +76,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/launched"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_launch" />
@@ -89,48 +86,43 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_18sdp"
-        android:fontFamily="@font/opensans"
         android:text="@string/suport_wallet"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
 
-    <TextView
-        android:id="@+id/tv_coin_wallet"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_wallet"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_130sdp"
         android:layout_marginStart="@dimen/_14sdp"
-        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         android:layout_marginEnd="@dimen/_14sdp"
-        android:fontFamily="@font/opensans"
-        android:text="@string/jenis_wallet"
-        android:justificationMode="inter_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_support_wallet" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_support_wallet"
+        tools:listitem="@layout/item_crypto_wallet" />
 
     <TextView
         android:id="@+id/tv_item_overview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_14sdp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:fontFamily="@font/opensans"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textStyle="bold"
         android:text="@string/coin_overview"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_coin_wallet" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_wallet" />
 
     <TextView
         android:id="@+id/tv_coin_overview"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/_130sdp"
         android:layout_marginStart="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_14sdp"
-        android:layout_marginBottom="@dimen/_14sdp"
-        android:fontFamily="@font/opensans"
         android:justificationMode="inter_word"
         android:text="@string/coin_description"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_overview" />

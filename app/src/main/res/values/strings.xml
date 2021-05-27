@@ -20,4 +20,5 @@
     <string name="suport_wallet">Suport Wallet :</string>
     <string name="jenis_wallet">jenis jenis wallet</string>
     <string name="Overview">Overview</string>
+    <string name="wallet_name">Wallet Name</string>
 </resources>

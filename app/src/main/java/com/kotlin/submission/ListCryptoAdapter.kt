@@ -14,7 +14,7 @@ import com.bumptech.glide.request.RequestOptions
 class ListCryptoAdapter(val listCrypto: ArrayList<Crypto>) : RecyclerView.Adapter<ListCryptoAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_row_crypto, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_crypto, viewGroup, false)
         return ListViewHolder(view)
     }
 
@@ -34,7 +34,6 @@ class ListCryptoAdapter(val listCrypto: ArrayList<Crypto>) : RecyclerView.Adapte
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_PHOTO, crypto.photo)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_LAUNCH, crypto.launch)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_WALLET, crypto.wallet)
-            cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_WALLET_IMG, crypto.walletimg)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_DETAIL, crypto.detail)
             context.startActivity(cryptoDetailActivity)
         }
