@@ -1,8 +1,10 @@
 package com.kotlin.submission
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,17 +23,17 @@ class MainActivity : AppCompatActivity() {
         rvCrypto.setHasFixedSize(true)
 
         list.addAll(CryptoData.listData)
-        showRecyclerCardView()
+        showRecyclerView()
+    }
+
+    private fun showRecyclerView() {
+        rvCrypto.layoutManager = LinearLayoutManager(this)
+        val listCryptoAdapter = ListCryptoAdapter(list)
+        rvCrypto.adapter = listCryptoAdapter
     }
 
     private fun setActionBarTitle(title: String) {
         supportActionBar?.title = title
-    }
-
-    private fun showRecyclerCardView() {
-        rvCrypto.layoutManager = LinearLayoutManager(this)
-        val cardViewCryptoAdapter = CardViewCryptoAdapter(list)
-        rvCrypto.adapter = cardViewCryptoAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
             R.id.action_aboutme -> {
-                title = "About Me"
+                startActivity(Intent(this@MainActivity, AboutMe::class.java))
             }
         }
         setActionBarTitle(title)

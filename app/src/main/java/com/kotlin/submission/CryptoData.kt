@@ -67,6 +67,12 @@ object CryptoData {
     "Ledger, Trezor, MathWallet, TrustWallet, BTC Wallet, Metamask, Coinbase, Cobo, SafePal",
     "Ledger, Trezor, MathWallet, TrustWallet, Coinbase, Cobo, SafePal, Luno")
 
+    private val walletImg = mapOf(
+        "Ledger" to R.drawable.ledger,
+        "Trezor" to R.drawable.trezor,
+        "MathWallet" to R.drawable.mathwallet
+    )
+
     private val cryptoImages = intArrayOf(R.drawable.logo_btc,
         R.drawable.logo_eth,
         R.drawable.logo_bnb,
