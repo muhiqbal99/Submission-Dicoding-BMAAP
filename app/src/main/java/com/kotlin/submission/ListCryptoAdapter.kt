@@ -27,13 +27,12 @@ class ListCryptoAdapter(val listCrypto: ArrayList<Crypto>) : RecyclerView.Adapte
         holder.tvCName.text = crypto.name
         holder.tvCDesc.text = crypto.detail
         holder.btnReadmore.setOnClickListener {
-            val context= holder.btnReadmore.context
+            val context = holder.btnReadmore.context
             val cryptoDetailActivity = Intent(context, DetailCrypto::class.java)
+            cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_PROFILE, crypto.profile)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_CREATOR, crypto.name)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_DOB, crypto.dob)
-            cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_PHOTO, crypto.photo)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_LAUNCH, crypto.launch)
-            cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_WALLET, crypto.wallet)
             cryptoDetailActivity.putExtra(DetailCrypto.EXTRA_DETAIL, crypto.detail)
             context.startActivity(cryptoDetailActivity)
         }

@@ -7,5 +7,6 @@ data class Crypto(
     var launch: String = "",
     var wallet: String = "",
     var detail: String = "",
-    var photo: Int = 0
+    var photo: Int = 0,
+    var profile: Int = 0
 )

@@ -34,6 +34,17 @@ object CryptoData {
         "Hardfork from BTC",
         "Charlie Lee")
 
+    private val cryptoProfile = intArrayOf(R.drawable.bitcoin_creator,
+        R.drawable.etherium_creator,
+        R.drawable.bnb_creator,
+        R.drawable.cardano_creator,
+        R.drawable.doge_creator,
+        R.drawable.theterus_creator,
+        R.drawable.xrp_creator,
+        R.drawable.polkadot_creator,
+        R.drawable.bch_creator,
+        R.drawable.litecoin_creator)
+
     private val cryptoDob = arrayOf("5 April 1975",
         "31 Januari 1994",
         "1977",
@@ -90,6 +101,7 @@ object CryptoData {
                 crypto.wallet = cryptoWallet[position]
                 crypto.detail = cryptoDetails[position]
                 crypto.photo = cryptoImages[position]
+                crypto.profile = cryptoProfile[position]
                 list.add(crypto)
             }
             return list
