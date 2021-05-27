@@ -8,5 +8,4 @@ data class Crypto(
     var wallet: String = "",
     var detail: String = "",
     var photo: Int = 0
-    var walletimg: Int = 0,
 )
